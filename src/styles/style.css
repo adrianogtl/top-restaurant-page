@@ -112,6 +112,6 @@ body {
 @media (max-width: 600px) {
   .component {
     width: 30em;
-    padding: 0;
+    padding: 0.5em 0;
   }
 }

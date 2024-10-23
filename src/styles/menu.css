@@ -8,6 +8,11 @@
   padding: 0 0.5em;
 }
 
+.list {
+  display: block;
+  line-height: 1.4;
+}
+
 .title {
   display: flex;
   align-items: baseline;
