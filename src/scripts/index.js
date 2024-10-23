@@ -1,6 +1,9 @@
-import { contactPage } from "./contact-page.js";
-import { homePage } from "./home-page.js";
-import { menuPage } from "./menu-page.js";
+import "../styles/normalize.css";
+import "../styles/style.css";
+
+import { aboutPage } from "./about.js";
+import { homePage } from "./home.js";
+import { menuPage } from "./menu.js";
 
 const content = document.querySelector("#content");
 function clearContent() {
@@ -8,19 +11,19 @@ function clearContent() {
 }
 
 function clickHandler(event) {
-  const button = event.target.textContent;
+  const button = event.target;
   clearContent();
 
-  if (button === "Home") {
+  if (button.textContent === "Home") {
     homePage();
   }
 
-  if (button === "Menu") {
+  if (button.textContent === "Menu") {
     menuPage();
   }
 
-  if (button === "Contact") {
-    contactPage();
+  if (button.textContent === "About") {
+    aboutPage();
   }
 }
 
