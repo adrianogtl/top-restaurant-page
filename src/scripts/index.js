@@ -6,13 +6,13 @@ import { homePage } from "./home.js";
 import { menuPage } from "./menu.js";
 
 const content = document.querySelector("#content");
-function clearContent() {
-  content.innerHTML = "";
-}
+let lastPage = document.querySelector(".button");
+let currentPage = document.querySelector(".button");
 
 function clickHandler(event) {
   const button = event.target;
-  clearContent();
+  content.innerHTML = "";
+  changeButtonStyle(button);
 
   if (button.textContent === "Home") {
     homePage();
@@ -27,9 +27,18 @@ function clickHandler(event) {
   }
 }
 
+function changeButtonStyle(button) {
+  lastPage = currentPage;
+  currentPage = button;
+  lastPage.classList.remove("button-active");
+  currentPage.classList.add("button-active");
+}
+
 const buttons = Array.from(document.querySelectorAll(".button"));
 buttons.forEach((button) => {
   button.addEventListener("click", clickHandler);
 });
 
+// Start
 homePage();
+currentPage.classList.add("button-active");

@@ -36,7 +36,6 @@ body {
   min-height: 100vh;
   font-size: 1.3rem;
   background-image: url(../img/background.jpg);
-  background-position: center;
 }
 
 .header {
@@ -52,6 +51,7 @@ body {
 .nav {
   display: flex;
   align-items: baseline;
+  padding: 0.5em;
 
   .list {
     display: flex;
@@ -66,7 +66,7 @@ body {
   color: var(--light-color);
   border: none;
   border-bottom: 1px solid transparent;
-  transition: border-bottom 0.5s;
+  transition: border-bottom 0.3s;
 
   &:hover {
     cursor: pointer;
@@ -74,13 +74,16 @@ body {
   }
 }
 
+.button-active {
+  border-bottom: 1px solid var(--light-color);
+}
+
 #content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin: 3em 0;
 }
 
 /* Component style */
@@ -107,11 +110,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  /* .nav {
-    align-items: center;
-  }
-
-  .list {
+  .component {
+    width: 30em;
     padding: 0;
-  } */
+  }
 }
