@@ -1,5 +1,3 @@
-import "../styles/menu.css";
-
 export function aboutPage() {
   const content = document.querySelector("#content");
   content.innerHTML = `

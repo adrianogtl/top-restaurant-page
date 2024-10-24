@@ -25,3 +25,9 @@
   text-align: left;
   font-size: 0.8em;
 }
+
+@media (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+}
